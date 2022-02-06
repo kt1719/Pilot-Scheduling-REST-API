@@ -2,19 +2,19 @@ README
 
 This is meant to be a RESTful service that will provide on-demand crew scheduling information to other services
 This service is meant to expose 2 endpoints:
-# 1. Request an available pilot for a given datetime and location
+### 1. Request an available pilot for a given datetime and location
 − The pilot must be available on the requested days at the requested location
 − The pilot must not already be scheduled to fly at those dates
 − Example GET
 localhost/pilots/availability?location=Munich&depDateTime=2025-08-01T00:00:00Z&returnDateTime=2025-08-02T00:00:00Z
 
-# 2. Schedule a Flight for a Pilot
+### 2. Schedule a Flight for a Pilot
 − Pilot's slot will be reserved if available
 − Example POST
 localhost/flights {"pilotId": 1823, "depDateTime": "2025-08-01T09:00:00Z", "returnDateTime": "2025-08-01T10:00:00Z"}
 
-'''json
-Crew Example JSON
+### Crew Example JSON
+```json
 { 
  "Crew": [ 
  { "ID": 1, "Name": "Andy", "Base": "Munich", "WorkDays": ["Monday", "Tuesday", "Thursday", "Saturday"] }, 
@@ -27,9 +27,9 @@ Crew Example JSON
  { "ID": 8, "Name": "Hermione", "Base": "Berlin", "WorkDays": ["Friday", "Saturday", "Sunday"] } 
  ]
 }
-'''
+```
 
-** Developed in the *.NET* framework with *C#* **
+> Developed in the [**.NET**](https://dotnet.microsoft.com/en-us/download/dotnet/5.0) framework with **C#**
 
 ## Prerequisites: 
 	
@@ -50,5 +50,5 @@ Crew Example JSON
 
 ## Notes: 
 
-- The json files can be stored in the Repository folder. Replace "crew.json" with own crew json file (The current one is the example JSON from the PDF)
-- Data persistence json file is the "flights_repo.json" file which stores a list of flights corresponding to each pilot
+- The json files can be stored in the Repository folder. Replace ["crew.json"](Models/crew.json) with own crew json file (The current one is the example JSON from the PDF)
+- Data persistence json file is the [*"flights_repo.json"*](Models/flights_repo.json) file which stores a list of flights corresponding to each pilot
