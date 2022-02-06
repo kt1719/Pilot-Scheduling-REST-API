@@ -6,14 +6,12 @@ This service is meant to expose 2 endpoints:
 	− The pilot must be available on the requested days at the requested location
 	− The pilot must not already be scheduled to fly at those dates
 *Example:*
->GET
-localhost/pilots/availability?location=Munich&depDateTime=2025-08-01T00:00:00Z&returnDateTime=2025-08-02T00:00:00Z
+> GET localhost/pilots/availability?location=Munich&depDateTime=2025-08-01T00:00:00Z&returnDateTime=2025-08-02T00:00:00Z
 
 ### 2. Schedule a Flight for a Pilot
 	− Pilot's slot will be reserved if available
 *Example:* 
->POST
-localhost/flights {"pilotId": 1823, "depDateTime": "2025-08-01T09:00:00Z", "returnDateTime": "2025-08-01T10:00:00Z"}
+> POST localhost/flights {"pilotId": 1823, "depDateTime": "2025-08-01T09:00:00Z", "returnDateTime": "2025-08-01T10:00:00Z"}
 
 ### Crew Example JSON
 ```json
