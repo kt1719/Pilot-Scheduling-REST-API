@@ -50,5 +50,5 @@ localhost/flights {"pilotId": 1823, "depDateTime": "2025-08-01T09:00:00Z", "retu
 
 ## Notes: 
 
-- The json files can be stored in the Repository folder. Replace ["crew.json"](CrewService/Repository/crew.json) with own crew json file (The current one is the example JSON from the PDF)
-- Data persistence json file is the [*"flights_repo.json"*](CrewService/Repository/flights_repo.json) file which stores a list of flights corresponding to each pilot
+- The json files can be stored in the Repository folder. Replace ["crew.json"](CrewService/Repositories/crew.json) with own crew json file (The current one is the example JSON from the PDF)
+- Data persistence json file is the [*"flights_repo.json"*](CrewService/Repositories/flights_repo.json) (will not be made until you run atleast once) file which stores a list of flights corresponding to each pilot
